@@ -1,5 +1,5 @@
 const layouts = {
-   en: `
+  en: `
     <div class="keyboard">
        <div class="row">
           <button class="button print" id="Backquote">\`</button>
@@ -76,7 +76,7 @@ const layouts = {
        </div>
     </div>
  `,
-   ru: `
+  ru: `
        <div class="keyboard">
           <div class="row">
              <button class="button print" id="Backquote">ё</button
@@ -153,7 +153,7 @@ const layouts = {
           </div>
        </div>
     `,
-   EN: `
+  EN: `
        <div class="keyboard">
           <div class="row">
              <button class="button print" id="Backquote">~</button
@@ -230,7 +230,7 @@ const layouts = {
           </div>
        </div>
     `,
-   RU: `
+  RU: `
        <div class="keyboard">
           <div class="row">
              <button class="button print" id="Backquote">Ё</button
@@ -307,7 +307,7 @@ const layouts = {
           </div>
        </div>
     `,
-   CapsEN: `
+  CapsEN: `
     <div class="keyboard">
        <div class="row">
           <button class="button print" id="Backquote">\`</button
@@ -384,7 +384,7 @@ const layouts = {
        </div>
     </div>
  `,
-   CapsRU: `
+  CapsRU: `
        <div class="keyboard">
           <div class="row">
              <button class="button print" id="Backquote">Ё</button
@@ -461,7 +461,7 @@ const layouts = {
           </div>
        </div>
     `,
-   ENShift: `
+  ENShift: `
     <div class="keyboard">
        <div class="row">
           <button class="button print" id="Backquote">~</button
@@ -538,7 +538,7 @@ const layouts = {
        </div>
     </div>
  `,
-   RUShift: `
+  RUShift: `
        <div class="keyboard">
           <div class="row">
              <button class="button print" id="Backquote">ё</button
@@ -615,15 +615,15 @@ const layouts = {
           </div>
        </div>
     `,
- };
- 
-  let body = document.querySelector('body');
+};
 
-  const createWrapper = () => {
+const body = document.querySelector('body');
+
+const createWrapper = () => {
   const wrapper = '<div class="wrapper"></div>';
   body.insertAdjacentHTML('afterbegin', wrapper);
 };
- createWrapper();
+createWrapper();
 
 const createTextarea = (lang) => {
   const wrapper = body.querySelector('.wrapper');
@@ -658,10 +658,8 @@ if (localStorage.layout) {
   createKeyboard(layouts[localStorage.getItem('layout')]);
 }
 
-
-
 let keyboard = document.querySelector('.keyboard');
-let textarea = document.querySelector('.textarea');
+const textarea = document.querySelector('.textarea');
 let buttons = document.querySelectorAll('.button');
 
 const createText = (text) => {
@@ -725,11 +723,10 @@ const addClickListener = (k) => {
         const { value } = textarea;
         const start = textarea.selectionStart;
         const end = textarea.selectionEnd;
-        
+
         if (start === end) {
           textarea.value = value.slice(0, start) + value.slice(end + 1);
-        }
-        else {
+        } else {
           textarea.value = value.slice(0, start) + value.slice(end);
         }
         textarea.selectionStart = start;
@@ -738,7 +735,7 @@ const addClickListener = (k) => {
       if (event.target.closest('.enter') === button) createText('\n');
       if (event.target.closest('.space') === button) createText(' ');
       if (event.target.closest('.tab') === button) createText('\t');
-      if (event.target.closest('.print') === button) {createText(button.innerText);}
+      if (event.target.closest('.print') === button) { createText(button.innerText); }
     });
   });
   keyboard.addEventListener('mouseup', (event) => {
@@ -784,7 +781,7 @@ const Handler = (event) => {
     window.removeEventListener('keydown', Handler);
     event.code === 'ShiftLeft' ? keyboard.querySelector('#ShiftLeft').classList.add('active') : keyboard.querySelector('#ShiftRight').classList.add('active');
   }
-  
+
   if (event.key === 'Alt') {
     event.preventDefault();
     event.code === 'AltLeft' ? keyboard.querySelector('#AltLeft').classList.add('active') : keyboard.querySelector('#AltRight').classList.add('active');
