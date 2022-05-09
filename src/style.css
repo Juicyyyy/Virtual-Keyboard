@@ -1,0 +1,188 @@
+body {
+    background-image: url(/Virtual-Keyboard/src/image/fon.jpg);
+    background-size: cover;
+}
+.keyboard{
+    margin: 0 auto;
+}
+.wrapper{
+    height: 530px;
+    width: 930px;
+    margin: 0 auto;
+}
+.textarea{
+    width: 890px;
+    height: 240px;
+    margin: 25px auto 0;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-size: 30px;
+    line-height: 130%;
+    color: #000000;
+    padding: 12px;
+}
+.description{
+    font-size: 24px;
+    text-align: center;
+}
+.button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    background-color: rgb(255, 196, 226);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: crimson;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .1s ease-out;
+}
+.button:hover {
+    background-color: rgb(255, 160, 209);
+    transform: scale(95%);
+}
+.button:focus {
+    background-color: rgb(255, 178, 218);
+    border-radius: 40px;
+}
+.active {
+    background-color: rgb(255, 160, 209);
+    transform: scale(95%);
+}
+.row{
+    width: 900px;
+    height: 56px;
+}
+.space{
+    width: 444px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.backspace{
+    width: 162px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: rgb(255, 196, 226);
+    color: crimson;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.enter{
+    width: 162px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.capslock{
+    width: 106px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab{
+    width: 106px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    background: rgb(255, 196, 226);
+    color: crimson;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.shift{
+    width: 134px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    background: rgb(255, 196, 226);
+    font-size: 1.05rem;
+    color: crimson;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.ctrl{
+    width: 76px;
+    height: 50px;
+    border: 1px solid crimson;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    border-radius: 20px;
+    background: crimson;
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.ctrl:hover, .space:hover, .capslock:hover, .enter:hover {
+    background-color: rgb(255, 196, 226);
+    color: crimson;
+    transform: scale(95%);
+}
+.ctrl:focus, .space:focus, .capslock:focus, .enter:focus{
+    background-color: rgb(255, 178, 218);
+    color: crimson;
+    border-radius: 40px;
+}
+.ctrl.active, .space.active, .capslock.active, .enter.active{
+    background-color: rgb(255, 160, 209);
+    color: crimson;
+    transform: scale(95%);
+}

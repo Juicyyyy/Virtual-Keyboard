@@ -1,0 +1,24 @@
+{
+  "name": "klava",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juicyyyy/Virtual-Keyboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juicyyyy/Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/Juicyyyy/Virtual-Keyboard#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
